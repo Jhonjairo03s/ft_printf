@@ -2,6 +2,10 @@
 
 Este repositorio contiene mi implementación de la función `ft_printf` en C, realizada como parte del proyecto `ft_printf` en 42 Urduliz.
 
+**Objetivo del proyecto**
+
+El objetivo de este proyecto es desarrollar mi propia versión de la función `printf`  de la librería estándar de C. Esta función, que se llamará `ft_printf` ,  debe ser capaz de replicar las funcionalidades básicas de `printf`. 
+
 **Funcionalidades:**
 
 *   Replica las funcionalidades básicas de la función `printf` de la librería estándar de C.
