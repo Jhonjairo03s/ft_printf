@@ -1,6 +1,6 @@
 # ft_printf: Mi implementación de printf en C
 
-Este repositorio contiene mi implementación de la función `ft_printf` en C, realizada como parte del proyecto `ft_printf` en 42 Urduliz.
+Este repositorio contiene mi implementación de la función `ft_printf` en C, realizada como parte del proyecto `ft_printf` en 42 Urduliz-Bizkaia.
 
 **Objetivo del proyecto**
 
@@ -42,6 +42,10 @@ El objetivo de este proyecto es desarrollar mi propia versión de la función `p
 
 Si encuentras algún error o quieres mejorar el proyecto, ¡no dudes en enviar un pull request!
 
-**Autor:**
+## Autor
 
-Jhon Valencia
+Jhon Jairo Valencia Gongora
+
+## Licencia
+
+Este proyecto está licenciado bajo la licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
