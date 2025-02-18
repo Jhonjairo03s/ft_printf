@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int.c                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhvalenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/24 15:40:46 by jhvalenc          #+#    #+#             */
-/*   Updated: 2024/12/26 16:13:24 by jhvalenc         ###   ########.fr       */
+/*   Created: 2024/12/02 16:14:12 by jhvalenc          #+#    #+#             */
+/*   Updated: 2025/02/07 16:48:12 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_int(int i)
+size_t	ft_strlen(const char *str)
 {
-	int				printed_chars;
-	char			*str;
+	size_t	length;
 
-	printed_chars = 0;
-	str = ft_itoa(i);
-	printed_chars = printed_chars + write(1, str, ft_strlen(str));
-	free(str);
-	return (printed_chars);
+	length = 0;
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+	return (length);
 }

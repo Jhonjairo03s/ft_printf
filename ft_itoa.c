@@ -1,59 +1,69 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_unsigned.c                                 :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhvalenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/23 16:52:25 by jhvalenc          #+#    #+#             */
-/*   Updated: 2024/12/24 12:24:21 by jhvalenc         ###   ########.fr       */
+/*   Created: 2024/12/17 12:43:19 by jhvalenc          #+#    #+#             */
+/*   Updated: 2024/12/18 11:34:12 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	count_digits(long long int n)
+static size_t	count_digits(int n)
 {
 	size_t				count;
+	long long int		ln;
 
 	count = 0;
-	if (n == 0)
+	ln = n;
+	if (ln == 0)
 		return (1);
-	while (n > 0)
+	if (ln < 0)
 	{
 		count++;
-		n = n / 10;
+		ln = -ln;
+	}
+	while (ln > 0)
+	{
+		count++;
+		ln = ln / 10;
 	}
 	return (count);
 }
 
-static void	fill_string(char *str, long long int n, size_t length)
+static void	fill_string(char *str, long long int ln, size_t length)
 {
-	if (n == 0)
+	if (ln == 0)
 	{
 		str[0] = '0';
 		return ;
 	}
-	while (n > 0)
+	if (ln < 0)
 	{
-		str[--length] = (n % 10) + '0';
-		n = n / 10;
+		str[0] = '-';
+		ln = -ln;
+	}
+	while (ln > 0)
+	{
+		str[--length] = (ln % 10) + '0';
+		ln = ln / 10;
 	}
 }
 
-char	*ft_itoa_unsigned(unsigned int n)
+char	*ft_itoa(int n)
 {
 	size_t				length;
 	char				*str;
 	long long int		ln;
 
+	length = count_digits(n);
 	ln = n;
-	length = count_digits(ln);
 	str = (char *)malloc(sizeof(char) * (length + 1));
 	if (str == NULL)
-	{
 		return (NULL);
-	}
 	str[length] = '\0';
 	fill_string(str, ln, length);
 	return (str);

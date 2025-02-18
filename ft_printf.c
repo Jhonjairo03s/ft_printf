@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 static int	ft_handle_chars(const char *format, int counter, va_list args)
 {

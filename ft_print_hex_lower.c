@@ -6,12 +6,11 @@
 /*   By: jhvalenc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 15:57:20 by jhvalenc          #+#    #+#             */
-/*   Updated: 2024/12/26 16:12:20 by jhvalenc         ###   ########.fr       */
+/*   Updated: 2025/02/13 17:50:57 by jhvalenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_print_hex_lower(unsigned int x)
 {

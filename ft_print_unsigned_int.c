@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_print_unsigned_int(unsigned int u)
 {
